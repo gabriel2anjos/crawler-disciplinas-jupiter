@@ -46,10 +46,15 @@ function crawlerPaginas(unidade) {
                 body = iconv.decode(body, encoding);
                 const $ = cheerio.load(body, {
                 });
-                let tabelaAlfabetica = $('#layout_conteudo').find('table').eq(0).children().eq(0).children().eq(0).children().filter('td');
-                tabelaAlfabetica.each(function (i, elem) {
+                if ($('#layout_conteudo').find('table').length==3){
+                    arrayIndices.push("A-Z");
+                }
+                else{
+                    let tabelaAlfabetica = $('#layout_conteudo').find('table').eq(0).children().eq(0).children().eq(0).children().filter('td');
+                    tabelaAlfabetica.each(function (i, elem) {
                     arrayIndices.push(tabelaAlfabetica.eq(i).text().slice(1, -1));
-                });
+                    });
+                }
                 resolve(arrayIndices);
             }
         });
@@ -67,7 +72,8 @@ async function crawlerDisciplinas(unidade, arrayIndices) {
                     const $ = cheerio.load(body, {
 
                     });
-                    let tabelaDisciplinas = $('#layout_conteudo').find('table').eq(1).children().eq(0).children().filter('tr');
+                    if (indice == 'A-Z') val = 0; else val = 1;
+                    let tabelaDisciplinas = $('#layout_conteudo').find('table').eq(val).children().eq(0).children().filter('tr');
                     tabelaDisciplinas.each(function (i, elem) {
                         let codigo = ($(elem).children().eq(0).children().eq(0).text().replace(/(\r\n\t|\n|\r\t)/gm, ""))
                         codigo = codigo.trim(codigo)

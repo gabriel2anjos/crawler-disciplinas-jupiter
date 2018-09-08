@@ -157,19 +157,30 @@ async function crawlerHorarios(arrayDisciplinas) {
 
 
 async function main() {
-    let data = new Date().getTime();
-    let unidades = await crawlerUnidades()
+    fs.writeFile('estatisticas.txt', '');
+    var data = new Date().getTime();
+    var unidades = await crawlerUnidades()
     console.log("Iniciando!");
     console.log('Foram encontradas ' + unidades.length + ' unidades');
     let agora = new Date().getTime();
     console.log('Tempo: ' + (agora - data) + 'ms');
+    fs.appendFile('estatisticas.txt', 'Iniciando!\nForam encontradas ' + unidades.length + ' unidades\nTempo: ' + (agora - data) + 'ms\n');
     console.log("==============================");
     for (unidade of unidades) {
+        fs.appendFile('estatisticas.txt', 'Obtendo disciplinas de '+unidade['nome']+'\n');
         console.log("Obtendo disciplinas de "+unidade['nome'])
+        data = new Date().getTime();
         indexes = await crawlerPaginas(unidade['codigo']);
         let arrayDisciplinas = await crawlerDisciplinas(unidade['codigo'], indexes)
-        console.log(await crawlerHorarios(arrayDisciplinas));
+        console.log(arrayDisciplinas.length +' disciplinas encontradas!')
+        agora = new Date().getTime();
+        fs.appendFile('estatisticas.txt', arrayDisciplinas.length +' disciplinas encontradas\nTempo: ' + (agora - data) + 'ms\nObtendo turmas\n');
+        console.log("Obtendo turmas");
+        data = new Date().getTime();
+        arrayDisciplinas = await crawlerHorarios(arrayDisciplinas);
         fs.writeFile('disciplinas'+unidade['codigo']+'.txt', JSON.stringify(arrayDisciplinas))
+        agora = new Date().getTime();
+        fs.appendFile('estatisticas.txt', 'Concluido!\nTempo: ' + (agora - data) + 'ms\n================\n');
     }
 
 }

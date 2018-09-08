@@ -1,0 +1,1 @@
+[{"nome":"Odontologia nas Fissuras Labiopalatinas","codigo":"HRB0001","creditos_aula":"2","tipo":"Semestral","turmas":[{"codigo":"Não há oferencimentos para a disciplina","professor":"","horarios":[]}]}]

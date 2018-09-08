@@ -1,0 +1,437 @@
+Iniciando!
+Foram encontradas 62 unidades
+Tempo: 213ms
+Obtendo disciplinas de Escola de Artes, Ciências e Humanidades
+799 disciplinas encontradas
+Tempo: 3104ms
+Obtendo turmas e creditos
+Concluido!
+Tempo: 200696ms
+================
+Obtendo disciplinas de Escola de Comunicações e Artes
+1104 disciplinas encontradas
+Tempo: 4767ms
+Obtendo turmas e creditos
+Concluido!
+Tempo: 266240ms
+================
+Obtendo disciplinas de Escola de Educação Física e Esporte
+138 disciplinas encontradas
+Tempo: 1434ms
+Obtendo turmas e creditos
+Concluido!
+Tempo: 32390ms
+================
+Obtendo disciplinas de Escola de Educação Física e Esporte de Ribeirão Preto
+71 disciplinas encontradas
+Tempo: 988ms
+Obtendo turmas e creditos
+Concluido!
+Tempo: 16335ms
+================
+Obtendo disciplinas de Escola de Enfermagem
+83 disciplinas encontradas
+Tempo: 1314ms
+Obtendo turmas e creditos
+Concluido!
+Tempo: 19494ms
+================
+Obtendo disciplinas de Escola de Enfermagem de Ribeirão Preto
+151 disciplinas encontradas
+Tempo: 1255ms
+Obtendo turmas e creditos
+Concluido!
+Tempo: 38082ms
+================
+Obtendo disciplinas de Escola de Enfermagem de Ribeirão Preto e Faculdade de Economia, Administração e Contabilidade de Ribeirão Preto
+0 disciplinas encontradas
+Tempo: 470ms
+Obtendo turmas e creditos
+Concluido!
+Tempo: 0ms
+================
+Obtendo disciplinas de Escola de Engenharia de Lorena
+450 disciplinas encontradas
+Tempo: 2199ms
+Obtendo turmas e creditos
+Concluido!
+Tempo: 108535ms
+================
+Obtendo disciplinas de Escola de Engenharia de São Carlos
+961 disciplinas encontradas
+Tempo: 4645ms
+Obtendo turmas e creditos
+Concluido!
+Tempo: 226566ms
+================
+Obtendo disciplinas de Escola de Engenharia de São Carlos e Instituto de Ciências Matemáticas e de Computação
+2 disciplinas encontradas
+Tempo: 856ms
+Obtendo turmas e creditos
+Concluido!
+Tempo: 473ms
+================
+Obtendo disciplinas de Escola Politécnica
+1713 disciplinas encontradas
+Tempo: 9409ms
+Obtendo turmas e creditos
+Concluido!
+Tempo: 467742ms
+================
+Obtendo disciplinas de Escola Superior de Agricultura "Luiz de Queiroz"
+453 disciplinas encontradas
+Tempo: 3761ms
+Obtendo turmas e creditos
+Concluido!
+Tempo: 153416ms
+================
+Obtendo disciplinas de Faculdade de Arquitetura e Urbanismo
+272 disciplinas encontradas
+Tempo: 1773ms
+Obtendo turmas e creditos
+Concluido!
+Tempo: 74417ms
+================
+Obtendo disciplinas de Faculdade de Ciências Farmacêuticas
+122 disciplinas encontradas
+Tempo: 1108ms
+Obtendo turmas e creditos
+Concluido!
+Tempo: 33509ms
+================
+Obtendo disciplinas de Faculdade de Ciências Farmacêuticas de Ribeirão Preto
+162 disciplinas encontradas
+Tempo: 1261ms
+Obtendo turmas e creditos
+Concluido!
+Tempo: 43895ms
+================
+Obtendo disciplinas de Faculdade de Ciências Farmacêuticas e Instituto de Ciências Biomédicas
+0 disciplinas encontradas
+Tempo: 522ms
+Obtendo turmas e creditos
+Concluido!
+Tempo: 0ms
+================
+Obtendo disciplinas de Faculdade de Direito
+683 disciplinas encontradas
+Tempo: 3028ms
+Obtendo turmas e creditos
+Concluido!
+Tempo: 176979ms
+================
+Obtendo disciplinas de Faculdade de Direito de Ribeirão Preto
+334 disciplinas encontradas
+Tempo: 1701ms
+Obtendo turmas e creditos
+Concluido!
+Tempo: 104946ms
+================
+Obtendo disciplinas de Faculdade de Economia, Administração e Contabilidade
+302 disciplinas encontradas
+Tempo: 1711ms
+Obtendo turmas e creditos
+Obtendo disciplinas de Faculdade de Economia, Administração e Contabilidade de Ribeirão Preto
+Concluido!
+Tempo: 80528ms
+================
+337 disciplinas encontradas
+Tempo: 1648ms
+Obtendo turmas e creditos
+Concluido!
+Tempo: 88662ms
+================
+Obtendo disciplinas de Faculdade de Educação
+293 disciplinas encontradas
+Tempo: 1924ms
+Obtendo turmas e creditos
+Concluido!
+Tempo: 74942ms
+================
+Obtendo disciplinas de Faculdade de Filosofia, Ciências e Letras de Ribeirão Preto
+1250 disciplinas encontradas
+Tempo: 5311ms
+Obtendo turmas e creditos
+Concluido!
+Tempo: 308884ms
+================
+Obtendo disciplinas de Faculdade de Filosofia, Ciências e Letras de Ribeirão Preto e Faculdade de Economia, Administração e Contabilidade de Ribeirão Preto
+0 disciplinas encontradas
+Tempo: 1630ms
+Obtendo turmas e creditos
+Concluido!
+Tempo: 0ms
+================
+Obtendo disciplinas de Faculdade de Filosofia, Ciências e Letras de Ribeirão Preto e Faculdade de Medicina de Ribeirão Preto
+68 disciplinas encontradas
+Tempo: 1071ms
+Obtendo turmas e creditos
+Concluido!
+Tempo: 16828ms
+================
+Obtendo disciplinas de Faculdade de Filosofia, Letras e Ciências Humanas
+1032 disciplinas encontradas
+Tempo: 4365ms
+Obtendo turmas e creditos
+Concluido!
+Tempo: 246161ms
+================
+Obtendo disciplinas de Faculdade de Medicina
+683 disciplinas encontradas
+Tempo: 4479ms
+Obtendo turmas e creditos
+Concluido!
+Tempo: 161448ms
+================
+Obtendo disciplinas de Faculdade de Medicina de Ribeirão Preto
+648 disciplinas encontradas
+Tempo: 4263ms
+Obtendo turmas e creditos
+Concluido!
+Tempo: 174873ms
+================
+Obtendo disciplinas de Faculdade de Medicina Veterinária e Zootecnia
+133 disciplinas encontradas
+Tempo: 1466ms
+Obtendo turmas e creditos
+Concluido!
+Tempo: 35967ms
+================
+Obtendo disciplinas de Faculdade de Medicina, Instituto de Ciências Biomédicas, Instituto de Química e Instituto de Biociências
+12 disciplinas encontradas
+Tempo: 909ms
+Obtendo turmas e creditos
+Concluido!
+Tempo: 3267ms
+================
+Obtendo disciplinas de Faculdade de Odontologia
+108 disciplinas encontradas
+Tempo: 1477ms
+Obtendo turmas e creditos
+Concluido!
+Tempo: 29582ms
+================
+Obtendo disciplinas de Faculdade de Odontologia de Bauru
+248 disciplinas encontradas
+Tempo: 2007ms
+Obtendo turmas e creditos
+Concluido!
+Tempo: 65592ms
+================
+Obtendo disciplinas de Faculdade de Odontologia de Ribeirão Preto
+123 disciplinas encontradas
+Tempo: 1377ms
+Obtendo turmas e creditos
+Concluido!
+Tempo: 30962ms
+================
+Obtendo disciplinas de Faculdade de Odontologia de Ribeirão Preto e Faculdade de Ciências Farmacêuticas de Ribeirão Preto
+0 disciplinas encontradas
+Tempo: 476ms
+Obtendo turmas e creditos
+Concluido!
+Tempo: 1ms
+================
+Obtendo disciplinas de Faculdade de Saúde Pública
+186 disciplinas encontradas
+Tempo: 1530ms
+Obtendo turmas e creditos
+Concluido!
+Tempo: 46466ms
+================
+Obtendo disciplinas de Faculdade de Saúde Pública e Faculdade de Ciências Farmacêuticas
+0 disciplinas encontradas
+Tempo: 479ms
+Obtendo turmas e creditos
+Concluido!
+Tempo: 0ms
+================
+Obtendo disciplinas de Faculdade de Zootecnia e Engenharia de Alimentos
+401 disciplinas encontradas
+Tempo: 2671ms
+Obtendo turmas e creditos
+Concluido!
+Tempo: 97190ms
+================
+Obtendo disciplinas de Física Médica - Instituto de Física e Faculdade de Medicina
+0 disciplinas encontradas
+Tempo: 493ms
+Obtendo turmas e creditos
+Concluido!
+Tempo: 1ms
+================
+Obtendo disciplinas de Hospital de Reabilitação de Anomalias Craniofaciais
+1 disciplinas encontradas
+Tempo: 968ms
+Obtendo turmas e creditos
+Concluido!
+Tempo: 274ms
+================
+Obtendo disciplinas de Instituto de Arquitetura e Urbanismo de São Carlos
+137 disciplinas encontradas
+Tempo: 1070ms
+Obtendo turmas e creditos
+Concluido!
+Tempo: 32870ms
+================
+Obtendo disciplinas de Instituto de Astronomia, Geofísica e Ciências Atmosféricas
+126 disciplinas encontradas
+Tempo: 1339ms
+Obtendo turmas e creditos
+Concluido!
+Tempo: 31351ms
+================
+Obtendo disciplinas de Instituto de Astronomia, Geofísica e Ciências Atmosféricas e Instituto de Geociências
+0 disciplinas encontradas
+Tempo: 462ms
+Obtendo turmas e creditos
+Concluido!
+Tempo: 0ms
+================
+Obtendo disciplinas de Instituto de Astronomia, Geofísica e Ciências Atmosféricas e Instituto Oceanográfico
+1 disciplinas encontradas
+Tempo: 911ms
+Obtendo turmas e creditos
+Concluido!
+Tempo: 213ms
+================
+Obtendo disciplinas de Instituto de Biociências
+131 disciplinas encontradas
+Tempo: 1342ms
+Obtendo turmas e creditos
+Concluido!
+Tempo: 32090ms
+================
+Obtendo disciplinas de Instituto de Biociências e Centro de Biologia Marinha
+1 disciplinas encontradas
+Tempo: 954ms
+Obtendo turmas e creditos
+Concluido!
+Tempo: 180ms
+================
+Obtendo disciplinas de Instituto de Ciências Biomédicas
+194 disciplinas encontradas
+Tempo: 1380ms
+Obtendo turmas e creditos
+Concluido!
+Tempo: 49920ms
+================
+Obtendo disciplinas de Instituto de Ciências Matemáticas e de Computação
+499 disciplinas encontradas
+Tempo: 2359ms
+Obtendo turmas e creditos
+Concluido!
+Tempo: 117077ms
+================
+Obtendo disciplinas de Instituto de Energia e Ambiente
+7 disciplinas encontradas
+Tempo: 878ms
+Obtendo turmas e creditos
+Concluido!
+Tempo: 1735ms
+================
+Obtendo disciplinas de Instituto de Estudos Avançados
+0 disciplinas encontradas
+Tempo: 434ms
+Obtendo turmas e creditos
+Concluido!
+Tempo: 1ms
+================
+Obtendo disciplinas de Instituto de Física
+203 disciplinas encontradas
+Tempo: 1435ms
+Obtendo turmas e creditos
+Concluido!
+Tempo: 55310ms
+================
+Obtendo disciplinas de Instituto de Física de São Carlos
+244 disciplinas encontradas
+Tempo: 1884ms
+Obtendo turmas e creditos
+Concluido!
+Tempo: 61702ms
+================
+Obtendo disciplinas de Instituto de Geociências
+123 disciplinas encontradas
+Tempo: 1348ms
+Obtendo turmas e creditos
+Concluido!
+Tempo: 30182ms
+================
+Obtendo disciplinas de Instituto de Matemática e Estatística
+333 disciplinas encontradas
+Tempo: 1839ms
+Obtendo turmas e creditos
+Concluido!
+Tempo: 76569ms
+================
+Obtendo disciplinas de Instituto de Medicina Tropical de São Paulo
+5 disciplinas encontradas
+Tempo: 1022ms
+Obtendo turmas e creditos
+Concluido!
+Tempo: 1564ms
+================
+Obtendo disciplinas de Instituto de Psicologia
+213 disciplinas encontradas
+Tempo: 1680ms
+Obtendo turmas e creditos
+Concluido!
+Tempo: 54822ms
+================
+Obtendo disciplinas de Instituto de Química
+207 disciplinas encontradas
+Tempo: 1281ms
+Obtendo turmas e creditos
+Concluido!
+Tempo: 50091ms
+================
+Obtendo disciplinas de Instituto de Química de São Carlos
+113 disciplinas encontradas
+Tempo: 1121ms
+Obtendo turmas e creditos
+Concluido!
+Tempo: 27664ms
+================
+Obtendo disciplinas de Instituto de Química e Faculdade de Ciências Farmacêuticas
+0 disciplinas encontradas
+Tempo: 520ms
+Obtendo turmas e creditos
+Concluido!
+Tempo: 1ms
+================
+Obtendo disciplinas de Instituto de Relações Internacionais
+83 disciplinas encontradas
+Tempo: 1034ms
+Obtendo turmas e creditos
+Concluido!
+Tempo: 18462ms
+================
+Obtendo disciplinas de Instituto Oceanográfico
+91 disciplinas encontradas
+Tempo: 1149ms
+Obtendo turmas e creditos
+Concluido!
+Tempo: 21829ms
+================
+Obtendo disciplinas de Licenciatura em Ciências Exatas - São Carlos
+106 disciplinas encontradas
+Tempo: 1185ms
+Obtendo turmas e creditos
+Concluido!
+Tempo: 25047ms
+================
+Obtendo disciplinas de Pró-Reitoria de Graduação  - Cursos Interunidades
+308 disciplinas encontradas
+Tempo: 2039ms
+Obtendo turmas e creditos
+Concluido!
+Tempo: 82357ms
+================
+Obtendo disciplinas de Pró-Reitoria de Graduação - Licenciatura em Ciências - Semipresencial
+0 disciplinas encontradas
+Tempo: 466ms
+Obtendo turmas e creditos
+Concluido!
+Tempo: 0ms
+================

@@ -3,6 +3,8 @@ var cheerio = require('cheerio');
 var iconv = require('iconv-lite');
 
 var encoding = 'iso-8859-1';
+const ENDERECO_ESTATISTICAS = 'disciplinas/estatisticas.txt';
+const ENDERECO_ARQUIVOS = 'disciplinas/'
 //let urlsPoli = ['A-B', 'C-D', 'E', 'F-H', 'I', 'L', 'M-N', 'O', 'P', 'Q-S', 'T-U', 'V']
 let paginas = [];
 var fs = require('fs');
@@ -85,6 +87,8 @@ async function crawlerDisciplinas(unidade, arrayIndices) {
                                 {
                                     nome: nome,
                                     codigo: codigo,
+                                    creditos_aula: "",
+                                    tipo: "",
                                     turmas: [],
                                 });
                         }
@@ -100,11 +104,11 @@ async function crawlerDisciplinas(unidade, arrayIndices) {
 
 async function crawlerHorarios(arrayDisciplinas) {
     // disciplinas[indice]['codigo']
+    let contador =1;
     for (disciplina of arrayDisciplinas) {
     await new Promise(resolve => {
-        console.log('=====');
-        console.log(disciplina)
-
+        console.log(contador+'/'+arrayDisciplinas.length)
+        contador++;
         request.get({ url: 'https://uspdigital.usp.br/jupiterweb/obterTurma?sgldis=' + disciplina['codigo'] }, function (err, httpResponse, body) {
             {
                 body = iconv.decode(body, encoding);
@@ -161,32 +165,64 @@ async function crawlerHorarios(arrayDisciplinas) {
     // loopRequests(indice+1);
 }
 
+async function crawlerCreditos(arrayDisciplinas) {
+    // disciplinas[indice]['codigo']
+    let contador=1;
+    for (disciplina of arrayDisciplinas) {
+        console.log(contador+'/'+arrayDisciplinas.length)
+        contador++;
+    await new Promise(resolve => {
+        request.get({ url: 'https://uspdigital.usp.br/jupiterweb/obterDisciplina?sgldis=' + disciplina['codigo'] }, function (err, httpResponse, body) {
+            {
+                body = iconv.decode(body, encoding);
+                const $ = cheerio.load(body, {});
+                let tabelaInformacoes = $('[name=form1]').children().eq(0).children().eq(0).children().eq(0).children().eq(0).children().filter('table').eq(3).children().eq(0).children().filter('tr');
+                let creditos = tabelaInformacoes.eq(0).children().eq(1).text().replace(/(\r\n\t|\n|\r\t)/gm, "");
+                creditos = creditos.trim(creditos);
+                let tipo = tabelaInformacoes.eq(3).children().eq(1).text().replace(/(\r\n\t|\n|\r\t)/gm, "");
+                tipo = tipo.trim(tipo);
+                disciplina['creditos_aula'] = creditos;
+                disciplina['tipo'] = tipo;
+                console.log(disciplina)
+                resolve('fim');
+                return 0;
+
+                
+            }
+        });
+    });}
+    return arrayDisciplinas;
+    // loopRequests(indice+1);
+}
 
 async function main() {
-    fs.writeFile('estatisticas.txt', '');
+
+    fs.writeFile(ENDERECO_ESTATISTICAS, '');
     var data = new Date().getTime();
     var unidades = await crawlerUnidades()
     console.log("Iniciando!");
     console.log('Foram encontradas ' + unidades.length + ' unidades');
     let agora = new Date().getTime();
     console.log('Tempo: ' + (agora - data) + 'ms');
-    fs.appendFile('estatisticas.txt', 'Iniciando!\nForam encontradas ' + unidades.length + ' unidades\nTempo: ' + (agora - data) + 'ms\n');
+    fs.appendFile(ENDERECO_ESTATISTICAS, 'Iniciando!\nForam encontradas ' + unidades.length + ' unidades\nTempo: ' + (agora - data) + 'ms\n');
     console.log("==============================");
     for (unidade of unidades) {
-        fs.appendFile('estatisticas.txt', 'Obtendo disciplinas de '+unidade['nome']+'\n');
+        fs.appendFile(ENDERECO_ESTATISTICAS, 'Obtendo disciplinas de '+unidade['nome']+'\n');
         console.log("Obtendo disciplinas de "+unidade['nome'])
         data = new Date().getTime();
         indexes = await crawlerPaginas(unidade['codigo']);
         let arrayDisciplinas = await crawlerDisciplinas(unidade['codigo'], indexes)
         console.log(arrayDisciplinas.length +' disciplinas encontradas!')
         agora = new Date().getTime();
-        fs.appendFile('estatisticas.txt', arrayDisciplinas.length +' disciplinas encontradas\nTempo: ' + (agora - data) + 'ms\nObtendo turmas\n');
+        fs.appendFile(ENDERECO_ESTATISTICAS, arrayDisciplinas.length +' disciplinas encontradas\nTempo: ' + (agora - data) + 'ms\nObtendo turmas e creditos\n');
         console.log("Obtendo turmas");
         data = new Date().getTime();
         arrayDisciplinas = await crawlerHorarios(arrayDisciplinas);
-        fs.writeFile('disciplinas'+unidade['codigo']+'.txt', JSON.stringify(arrayDisciplinas))
+        console.log("Obtendo creditos");
+        arrayDisciplinas = await crawlerCreditos(arrayDisciplinas);
+        fs.writeFile(ENDERECO_ARQUIVOS+'disciplinas'+unidade['codigo']+'.txt', JSON.stringify(arrayDisciplinas))
         agora = new Date().getTime();
-        fs.appendFile('estatisticas.txt', 'Concluido!\nTempo: ' + (agora - data) + 'ms\n================\n');
+        fs.appendFile(ENDERECO_ESTATISTICAS, 'Concluido!\nTempo: ' + (agora - data) + 'ms\n================\n');
     }
 
 }

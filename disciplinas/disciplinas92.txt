@@ -1,0 +1,1 @@
+[{"nome":"Diversidade e Evolução em Invertebrados Marinhos","codigo":"9200001","creditos_aula":"4","tipo":"Semestral","turmas":[{"codigo":"Não há oferencimentos para a disciplina","professor":"","horarios":[]}]}]

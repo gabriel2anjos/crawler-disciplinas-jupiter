@@ -1,0 +1,1 @@
+[{"nome":"Climatologia, Hidrometeorologia e Oceanografia","codigo":"9300001","creditos_aula":"4","tipo":"Semestral","turmas":[{"codigo":"Não há oferencimentos para a disciplina","professor":"","horarios":[]}]}]

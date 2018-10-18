@@ -1,13 +1,12 @@
+//Crawlerzão top by Gabriel dos Anjos
 var request = require('request');
 var cheerio = require('cheerio');
 var iconv = require('iconv-lite');
-
-var encoding = 'iso-8859-1';
-const ENDERECO_ESTATISTICAS = 'disciplinas/estatisticas.txt';
-const ENDERECO_ARQUIVOS = 'disciplinas/'
-//let urlsPoli = ['A-B', 'C-D', 'E', 'F-H', 'I', 'L', 'M-N', 'O', 'P', 'Q-S', 'T-U', 'V']
-let paginas = [];
 var fs = require('fs');
+
+const ENDERECO_ESTATISTICAS = 'disciplinas/estatisticas.txt';
+const ENDERECO_ARQUIVOS = './disciplinas/'
+var encoding = 'iso-8859-1';
 
 
 // Retorna array de unidades (wait)
@@ -196,7 +195,9 @@ async function crawlerCreditos(arrayDisciplinas) {
 }
 
 async function main() {
-
+    if (!fs.existsSync(ENDERECO_ARQUIVOS)){
+        fs.mkdirSync(ENDERECO_ARQUIVOS);
+    }
     fs.writeFile(ENDERECO_ESTATISTICAS, '');
     var data = new Date().getTime();
     var unidades = await crawlerUnidades()
@@ -204,25 +205,25 @@ async function main() {
     console.log('Foram encontradas ' + unidades.length + ' unidades');
     let agora = new Date().getTime();
     console.log('Tempo: ' + (agora - data) + 'ms');
-    fs.appendFile(ENDERECO_ESTATISTICAS, 'Iniciando!\nForam encontradas ' + unidades.length + ' unidades\nTempo: ' + (agora - data) + 'ms\n');
+    fs.appendFileSync(ENDERECO_ESTATISTICAS, 'Iniciando!\nForam encontradas ' + unidades.length + ' unidades\nTempo: ' + (agora - data) + 'ms\n');
     console.log("==============================");
     for (unidade of unidades) {
-        fs.appendFile(ENDERECO_ESTATISTICAS, 'Obtendo disciplinas de '+unidade['nome']+'\n');
+        fs.appendFileSync(ENDERECO_ESTATISTICAS, 'Obtendo disciplinas de '+unidade['nome']+'\n');
         console.log("Obtendo disciplinas de "+unidade['nome'])
         data = new Date().getTime();
         indexes = await crawlerPaginas(unidade['codigo']);
         let arrayDisciplinas = await crawlerDisciplinas(unidade['codigo'], indexes)
         console.log(arrayDisciplinas.length +' disciplinas encontradas!')
         agora = new Date().getTime();
-        fs.appendFile(ENDERECO_ESTATISTICAS, arrayDisciplinas.length +' disciplinas encontradas\nTempo: ' + (agora - data) + 'ms\nObtendo turmas e creditos\n');
+        fs.appendFileSync(ENDERECO_ESTATISTICAS, arrayDisciplinas.length +' disciplinas encontradas\nTempo: ' + (agora - data) + 'ms\nObtendo turmas e creditos\n');
         console.log("Obtendo turmas");
         data = new Date().getTime();
         arrayDisciplinas = await crawlerHorarios(arrayDisciplinas);
         console.log("Obtendo creditos");
         arrayDisciplinas = await crawlerCreditos(arrayDisciplinas);
-        fs.writeFile(ENDERECO_ARQUIVOS+'disciplinas'+unidade['codigo']+'.txt', JSON.stringify(arrayDisciplinas))
+        fs.appendFileSync(ENDERECO_ARQUIVOS+'disciplinas'+unidade['codigo']+'.txt', JSON.stringify(arrayDisciplinas))
         agora = new Date().getTime();
-        fs.appendFile(ENDERECO_ESTATISTICAS, 'Concluido!\nTempo: ' + (agora - data) + 'ms\n================\n');
+        fs.appendFileSync(ENDERECO_ESTATISTICAS, 'Concluido!\nTempo: ' + (agora - data) + 'ms\n================\n');
     }
 
 }
